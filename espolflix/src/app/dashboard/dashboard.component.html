@@ -1,0 +1,27 @@
+
+<div class="videos-grid">
+  <div class="recommended-info">
+    <h3>Videos</h3>
+  </div>
+  <div class="flex-container">
+    <div class="row">
+      <div class="col-md-4 resent-grid recommended-grid slider-top-grids" *ngFor="let video of videos"
+      >
+        <div class="resent-grid-img recommended-grid-img">
+          <a routerLink="/video/{{video.id}}"><img [src]="video.img" alt="" /></a>
+          <div class="clck">
+            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="resent-grid-info recommended-grid-info">
+          <h3><a routerLink="/video/{{video.id}}" class="title title-info">{{video.title}}</a></h3>
+          <ul>
+            <li class="w-100">
+              <p class="author author-info d-flex flex-column"><a class="author align-self-end">{{video.author}}</a></p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"> </div>
+</div>
